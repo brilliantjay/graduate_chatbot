@@ -53,7 +53,7 @@ def get_retriever():
 
 def get_llm(model='gpt-4o'):
     #llm = ChatOpenAI(model=model)    
-    llm  = ChatUpstage()
+    llm  = ChatUpstage(temperature=0.3)
     return llm
 
 def get_history_retriever(llm):    
