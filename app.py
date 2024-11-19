@@ -12,11 +12,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
 load_dotenv()   
-st.set_page_config(page_title="입학 챗봇")
+st.set_page_config(page_title="대학원 입학 정보 챗봇")
 
 
-st.title("입학 챗봇")
-st.caption("입학에 관련된 서류상의 내용을 검색해 답해드립니다!")   
+st.title("대학원 입학 정보 챗봇")
+st.caption("대학원 입학에 관련된 서류상의 내용을 검색해 답해드립니다!")   
 #질문시 무엇인가요?로 끝나야 한다. 
 
 chain = get_wikipedia()
@@ -28,7 +28,7 @@ for message in st.session_state.message_list:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
-if user_question := st.chat_input(placeholder="입학에 관련된 궁금한 내용들을 말씀해주세요!"):
+if user_question := st.chat_input(placeholder="대학원 입학에 관련된 궁금한 내용들을 말씀해주세요!"):
     with st.chat_message("user"):
         st.write(user_question)
     st.session_state.message_list.append({"role": "user", "content": user_question})
