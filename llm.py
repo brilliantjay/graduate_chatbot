@@ -34,7 +34,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 def get_retriever():
     #embedding = OpenAIEmbeddings(model='text-embedding-3-large')
     embedding = UpstageEmbeddings(model="solar-embedding-1-large")
-    index_name = 'test'
+    index_name = 'data4'
     #index_name = "graduate"
     
     '''
@@ -53,7 +53,7 @@ def get_retriever():
 
 def get_llm(model='gpt-4o'):
     #llm = ChatOpenAI(model=model)    
-    llm  = ChatUpstage(temperature=0.3)
+    llm  = ChatUpstage(temperature=0)
     return llm
 
 def get_history_retriever(llm):    
