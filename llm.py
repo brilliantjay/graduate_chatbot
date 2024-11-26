@@ -34,7 +34,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 def get_retriever():
     #embedding = OpenAIEmbeddings(model='text-embedding-3-large')
     embedding = UpstageEmbeddings(model="solar-embedding-1-large")
-    index_name = "data4"
+    index_name = "data"
     #index_name = "graduate"
     
     '''
